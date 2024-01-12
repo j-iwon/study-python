@@ -11,31 +11,31 @@
 # 거리에 따른 잔돈 계산 메소드 정의
 
 # # 1.
-# class Taxi:
-#     default_fare = 5800
-#     default_distance = 2
-#     fare_per_km = 1000
-#
-#     def __init__(self, money, distance):
-#         self.money = money
-#         self.distance = distance
-#
-#     def calculate_fare(self):
-#         cost = Taxi.default_fare
-#         if self.distance > Taxi.default_distance:
-#             cost += (self.distance - Taxi.default_distance) * Taxi.fare_per_km
-#
-#         return cost
-#
-#     def get_change(self):
-#         return self.money - self.calculate_fare()
-#
-#
-# taxi = Taxi(20000, 1)
-# print(taxi.calculate_fare(), taxi.get_change())
-#
-# taxi = Taxi(30000, 10)
-# print(taxi.calculate_fare(), taxi.get_change())
+class Taxi:
+    default_fare = 5800
+    default_distance = 2
+    fare_per_km = 1000
+
+    def __init__(self, money, distance):
+        self.money = money
+        self.distance = distance
+
+    def calculate_fare(self):
+        cost = Taxi.default_fare
+        if self.distance > Taxi.default_distance:
+            cost += (self.distance - Taxi.default_distance) * Taxi.fare_per_km
+
+        return cost
+
+    def get_change(self):
+        return self.money - self.calculate_fare()
+
+
+taxi = Taxi(20000, 1)
+print(taxi.calculate_fare(), taxi.get_change())
+
+taxi = Taxi(30000, 10)
+print(taxi.calculate_fare(), taxi.get_change())
 
 
 

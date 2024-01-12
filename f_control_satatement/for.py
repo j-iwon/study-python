@@ -16,14 +16,14 @@
 
 # 1~10까지 중 3까지만 출력
 
-# for i in range(10):
-#     print(i + 1)
-#     if i == 2:
-#         break
+for i in range(10):
+    print(i + 1)
+    if i == 2:
+        break
 
 # 1~10까지 중 4를 제외하고 출력
 
-# for i in range(10):
-#     if i == 3:
-#         continue # 특정 조건에서 continu 밑을 출력하고싶지 않을 때
-#     print(i + 1)
+for i in range(10):
+    if i == 3:
+        continue # 특정 조건에서 continu 밑을 출력하고싶지 않을 때
+    print(i + 1)

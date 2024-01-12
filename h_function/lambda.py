@@ -2,14 +2,14 @@
 # lambda 매개변수, ... : 리턴값
 
 # 일반 함수
-# def add(number1, number2):
-#     return number1 + number2
-#
+def add(number1, number2):
+    return number1 + number2
+
 # 익명 함수
-# lambda number1, number2 : number1 + number2
+lambda number1, number2 : number1 + number2
 
 # 사용 예시
-# print(list(map(lambda number: number + 2, [1, 2, 3, 4])))
+print(list(map(lambda number: number + 2, [1, 2, 3, 4])))
 
 
 # 실습

@@ -15,16 +15,16 @@ class Car:
         print(self.brand + '시동 꺼짐')
 
 
-# mom_car = Car('Benz', 'Black', 15000)
-# daddy_car = Car('BMW', 'Blue',8800)
-#
-# mom_car.engine_start()
-# daddy_car.engine_start()
-#
-# print(Car.wheel)
-#
-# Car.wheel = 6 # Class로 바로 접근
-# print(Car.wheel)
+mom_car = Car('Benz', 'Black', 15000)
+daddy_car = Car('BMW', 'Blue',8800)
+
+mom_car.engine_start()
+daddy_car.engine_start()
+
+print(Car.wheel)
+
+Car.wheel = 6 # Class로 바로 접근
+print(Car.wheel)
 
 cars = [Car, Car] #클래스명만 입력해도 주소값이 할당됨 Car라는 자료형을 미리 선언해놓음
 mom_car = cars[0]() #소괄호를 하면 선언해놓은 주소값에 메모리가 할당됨(생성자가 완성됨). 호출할 때 반드시 소괄호 !

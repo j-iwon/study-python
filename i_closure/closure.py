@@ -1,27 +1,27 @@
-# def set_key(key):
-#     formatting = ''
-#
-#     # 클로저
-#     def set_value(value):
-#         nonlocal formatting
-#         formatting = f'{key}:{value}' # 위에서 받은 key와 value를 모두 사용하여 새롭게 선언
-#         return formatting
-#
-#     return set_value
-# # set_value 에서 formatting 을 선언했기 때문에, set_key를 사용하는 순간 값이 set_value가 되어야함
-# set_name = set_key('이름') #set_key()괄호가 붙어 함수임을 볼 수 있어야함
-# formatting = set_name("한동석")
-# print(formatting)
-# # set_key()() < 라고 선언하면 set_value의 값이 된다.
-#
-# # key값이 없이는 value를 실행할 수 없다.
-# # read가 아니라 right 하는 경우 : nonlocal 선언(set_value의 지역변수가 아니라고 선언) 후 사용할 수 있다.
-#
-# # '나이: 00살'
-#
-# set_age = set_key('나이')
-# formatting_age = set_age('00살')
-# print(formatting_age)
+def set_key(key):
+    formatting = ''
+
+    # 클로저
+    def set_value(value):
+        nonlocal formatting
+        formatting = f'{key}:{value}' # 위에서 받은 key와 value를 모두 사용하여 새롭게 선언
+        return formatting
+
+    return set_value
+# set_value 에서 formatting 을 선언했기 때문에, set_key를 사용하는 순간 값이 set_value가 되어야함
+set_name = set_key('이름') #set_key()괄호가 붙어 함수임을 볼 수 있어야함
+formatting = set_name("한동석")
+print(formatting)
+# set_key()() < 라고 선언하면 set_value의 값이 된다.
+
+# key값이 없이는 value를 실행할 수 없다.
+# read가 아니라 right 하는 경우 : nonlocal 선언(set_value의 지역변수가 아니라고 선언) 후 사용할 수 있다.
+
+# '나이: 00살'
+
+set_age = set_key('나이')
+formatting_age = set_age('00살')
+print(formatting_age)
 
 # 실습 1
 # 이름(name) 또는 주제(topic) 및 요약(point), 둘 중 하나를 전달할 수 있다.

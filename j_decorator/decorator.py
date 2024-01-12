@@ -1,31 +1,31 @@
-# import datetime
-#
-# def log_time(original_function): #1. 주변로직 함수 먼저 만들기
-#     print('log_time 들어옴')
-#
-#     def logging(*args):
-#         print('logging 들어옴')
-#         print(args)
-#         print(datetime.datetime.now())
-#         print('logging 함수 종료')
-#         return original_function(*args)
-#
-#     print('log_time 함수 종료')
-#     return logging
-#
-#
-# @log_time
-# def add(*args):
-#                     # 원래 이 자리에 들어가야할 함수들을
-#                     # 데코레이터를 통해 @log_time 으로 만듦
-#     total = 0
-#     for i in args:
-#         total += i
-#
-#     return total
-#
-# result = add(1, 2, 3)
-# print(result)
+import datetime
+
+def log_time(original_function): #1. 주변로직 함수 먼저 만들기
+    print('log_time 들어옴')
+
+    def logging(*args):
+        print('logging 들어옴')
+        print(args)
+        print(datetime.datetime.now())
+        print('logging 함수 종료')
+        return original_function(*args)
+
+    print('log_time 함수 종료')
+    return logging
+
+
+@log_time
+def add(*args):
+                    # 원래 이 자리에 들어가야할 함수들을
+                    # 데코레이터를 통해 @log_time 으로 만듦
+    total = 0
+    for i in args:
+        total += i
+
+    return total
+
+result = add(1, 2, 3)
+print(result)
 
 
 # ((결과))

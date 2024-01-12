@@ -16,9 +16,9 @@ class User:
         self.user_password = user_password
         self.user_name = user_name
 
-    # @staticmethod
-    # def get_number():
-    #     return User.number
+    @staticmethod
+    def get_number():
+        return User.number
 
     @classmethod
     def set_admin(cls, **kwargs):
