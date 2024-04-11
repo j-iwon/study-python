@@ -15,8 +15,8 @@ if __name__ == '__main__':
 
     # 회원 정보 전체 조회
     find_all_query = "select email, password, name from tbl_member"
-    # members = find_all(find_all_query)
-    # print(members)
+    members = find_all(find_all_query)
+    print(members)
 
     # 이메일로 회원 1명 조회
     find_by_id_query = "select email, password, name from tbl_member where email = %s"
